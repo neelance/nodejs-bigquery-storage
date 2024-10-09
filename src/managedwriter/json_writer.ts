@@ -30,8 +30,8 @@ type IDescriptorProto = protos.google.protobuf.IDescriptorProto;
 export type JSONPrimitive = string | number | bigint | boolean | Date | null;
 export type JSONValue = JSONPrimitive | JSONObject | JSONArray;
 export type JSONObject = {[member: string]: JSONValue};
-export type JSONArray = Array<JSONValue>;
-export type JSONList = Array<JSONObject>;
+export type JSONArray = ReadonlyArray<JSONValue>;
+export type JSONList = ReadonlyArray<JSONObject>;
 
 /**
  * A StreamWriter that can write JSON data to BigQuery tables. The JSONWriter is
